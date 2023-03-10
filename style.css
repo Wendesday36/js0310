@@ -1,0 +1,21 @@
+section{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+section div img{
+    width: 100%;
+}
+.jobb{
+    width: auto;
+}
+.bal{
+    width: auto;
+}
+article img{
+    width: 300px;
+    align-content: space-evenly;
+}
+article{
+    display: flex;
+    
+}
