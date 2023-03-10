@@ -11,16 +11,16 @@ window.addEventListener("load", function () {
     articleElem[0].innerHTML += `<div><img src="${KEPEKLISTA[index]}" alt ="#"></div>`;
   }
   console.log(articleElem);
-  articleElem.click;
+  /**articleElem.click;*/
   const KISKEPEK = document.querySelectorAll("article div img");
   for (let index = 0; index < KISKEPEK.length; index++) {
     KISKEPEK[index].addEventListener("click", function () {
       kepMegnyit(index, KEPEKLISTA);
     });
   }
-  const balgomb = document.querySelector(".bal");
+  /**const balgomb = document.querySelector(".bal");
   const jobbgomb= document.querySelector(".jobb");
-  gombok = kiskepek;
+  gombok = kiskepek;*/
 });
 function kepMegnyit(index, KEPEKLISTA) {
   console.log(event.target); /**ez az elem valtotta ki az esemenyt */
