@@ -13,10 +13,11 @@ section div img{
 }
 article img{
     width: 300px;
-    margin: auto ;
-    align-content: space-evenly;
+    margin: auto;
+    padding: 5px;
 }
 article{
     display: flex;
-    
+    align-content: space-evenly;
+
 }
