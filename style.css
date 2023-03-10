@@ -13,6 +13,7 @@ section div img{
 }
 article img{
     width: 300px;
+    margin: auto ;
     align-content: space-evenly;
 }
 article{
