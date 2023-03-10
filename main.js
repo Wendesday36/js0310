@@ -5,6 +5,7 @@ window.addEventListener("load", function () {
     "kepek/DSC7444.jpg",
     "kepek/DSC7515.jpg",
   ];
+  let mostaniIndex = 0;
   let articleElem = document.querySelectorAll("article");
 
   for (let index = 0; index < KEPEKLISTA.length; index++) {
@@ -16,15 +17,31 @@ window.addEventListener("load", function () {
   for (let index = 0; index < KISKEPEK.length; index++) {
     KISKEPEK[index].addEventListener("click", function () {
       kepMegnyit(index, KEPEKLISTA);
+      mostaniIndex = index;
     });
   }
-  /**const balgomb = document.querySelector(".bal");
+  const balgomb = document.querySelector(".bal");
+  balgomb.addEventListener("click",function () {
+    mostaniIndex--;
+    if (mostaniIndex < 0) {
+      mostaniIndex = KEPEKLISTA.length-1;
+    }
+    kepMegnyit(mostaniIndex, KEPEKLISTA);
+  });
   const jobbgomb= document.querySelector(".jobb");
-  gombok = kiskepek;*/
+  jobbgomb.addEventListener("click",function () {
+    mostaniIndex++;
+    if (mostaniIndex>= KEPEKLISTA.length) {
+      mostaniIndex = 0;
+    }
+    kepMegnyit(mostaniIndex, KEPEKLISTA);
+  });
+  
 });
 function kepMegnyit(index, KEPEKLISTA) {
   console.log(event.target); /**ez az elem valtotta ki az esemenyt */
   const NAGYKEP = document.querySelectorAll("section div img");
   console.log(NAGYKEP);
   NAGYKEP[0].src = KEPEKLISTA[index];
+  
 }
